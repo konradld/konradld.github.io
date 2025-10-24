@@ -4,7 +4,6 @@ collection: research
 category: workinprogress
 permalink: /publication/2025-generalized-moment-prior
 excerpt: 'This paper develops a novel Bayesian prior distribution that approximates exact moment conditions while maintaining computational tractability.'
-date: 2025-01-01
 venue: 'Work in Progress'
 citation: 'Konrad, L.D. (2025). &quot;The Approximately Exact Generalized Moment Prior.&quot; <i>Working Paper</i>.'
 ---
