@@ -4,8 +4,8 @@ collection: research
 category: workinprogress
 permalink: /publication/2025-bisam
 excerpt: 'This paper introduces an R package for Bayesian indicator saturation, enabling robust detection of outliers and structural breaks.'
-date: 2025-01-01
-venue: 'Work in Progress'
+date: 'Work in Progress'
+venue:
 citation: 'Konrad, L.D., Goldmann, J. (2025). &quot;BISAM - Estimating Bayesian Indicator Saturated Models in R.&quot; <i>Working Paper</i>.'
 ---
 
