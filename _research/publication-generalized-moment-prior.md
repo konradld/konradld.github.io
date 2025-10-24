@@ -5,7 +5,7 @@ category: workinprogress
 permalink: /publication/2025-generalized-moment-prior
 excerpt: 'This paper develops a novel Bayesian prior distribution that approximates exact moment conditions while maintaining computational tractability.'
 
-citation: 'Konrad, L.D. (2025). &quot;The Approximately Exact Generalized Moment Prior.&quot; <i>Working Paper</i>.'
+citation: 'Konrad, L.D. (2025). &quot;The Approximately Exact Generalized Moment Prior.&quot; <i>Unpublished Document</i>.'
 ---
 
 This paper introduces a new class of prior distributions for Bayesian inference that builts up on the Normal product Moment prior.
