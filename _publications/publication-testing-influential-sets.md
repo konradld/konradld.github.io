@@ -1,6 +1,6 @@
 ---
 title: "Testing for Influential Sets"
-collection: publications
+collection: research
 category: workinprogress
 permalink: /publication/2025-testing-influential-sets
 excerpt: 'This paper develops a novel methodology for identifying and testing influential subsets of observations in econometric models.'
