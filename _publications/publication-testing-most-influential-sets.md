@@ -1,6 +1,6 @@
 ---
 title: "Testing Most Influential Sets"
-collection: publications
+collection: research
 category: preprint
 permalink: /publication/2025-testing-most-influential-sets
 excerpt: 'This paper extends influential set detection methodology to identify the most impactful observations in econometric analysis.'
