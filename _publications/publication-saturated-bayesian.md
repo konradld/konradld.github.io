@@ -1,11 +1,11 @@
 ---
 title: "The Saturated Bayesian - Break Detection in Panel Data with Short Time Horizons"
 collection: publications
-category: workingpapers
+category: workinprogress
 permalink: /publication/2024-saturated-bayesian
 excerpt: 'This paper develops Bayesian methods for detecting structural breaks in panel data when the time dimension is limited.'
 date: 2024-01-01
-venue: 'Working Paper'
+venue: 'Work in Progress'
 citation: 'Konrad, L.D., Vashold, L., Crespo Cuaresma, J. (2024). &quot;The Saturated Bayesian - Break Detection in Panel Data with Short Time Horizons.&quot; <i>Working Paper</i>.'
 ---
 
