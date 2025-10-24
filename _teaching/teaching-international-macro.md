@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/international-macroeconomics
 venue: "WU Vienna, Department of Economics"
-date: 2022-09-01
+date: 2023-09-01
 location: "Vienna, Austria"
 ---
 
