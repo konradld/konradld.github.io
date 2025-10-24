@@ -4,8 +4,6 @@ collection: research
 category: workinprogress
 permalink: /publication/2025-growth-at-risk
 excerpt: 'This paper analyzes macroeconomic downside risk by incorporating conditional skewness into growth forecasting models.'
-date: 2025-01-01
-venue: 'Work in Progress'
 citation: 'Konrad, L.D., Pfarrhofer, M. (2025). &quot;Skewness in Mean - Growth at Risk.&quot; <i>Working Paper</i>.'
 ---
 
