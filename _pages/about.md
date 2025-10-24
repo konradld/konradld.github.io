@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I am a PhD Candidate at the [Vienna University of Economics and Business](https://www.wu.ac.at/en/).
+I am a PhD Candidate at the [Vienna University of Economics and Business](https://www.wu.ac.at/en/).
 
 My research interests are econometric robustness and anomaly detection in economic data as well as economic risk. 
 
