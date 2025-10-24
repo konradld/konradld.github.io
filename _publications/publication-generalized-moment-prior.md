@@ -1,6 +1,6 @@
 ---
 title: "Generalized Normal Moment Prior"
-collection: publications
+collection: research
 category: workinprogress
 permalink: /publication/2025-generalized-moment-prior
 excerpt: 'This paper develops a novel Bayesian prior distribution that approximates exact moment conditions while maintaining computational tractability.'
