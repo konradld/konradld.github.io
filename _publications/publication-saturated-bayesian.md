@@ -1,6 +1,6 @@
 ---
 title: "The Saturated Bayesian - Break Detection in Panel Data with Short Time Horizons"
-collection: publications
+collection: research
 category: workinprogress
 permalink: /publication/2024-saturated-bayesian
 excerpt: 'This paper develops Bayesian methods for detecting structural breaks in panel data when the time dimension is limited.'
