@@ -1,6 +1,6 @@
 ---
 title: "BISAM - Estimating Bayesian Indicator Saturated Models in R"
-collection: publications
+collection: research
 category: workinprogress
 permalink: /publication/2025-bisam
 excerpt: 'This paper introduces an R package for Bayesian indicator saturation, enabling robust detection of outliers and structural breaks.'
