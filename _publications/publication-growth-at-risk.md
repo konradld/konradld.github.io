@@ -1,6 +1,6 @@
 ---
 title: "Skewness in Mean - Growth at Risk"
-collection: publications
+collection: research
 category: workinprogress
 permalink: /publication/2025-growth-at-risk
 excerpt: 'This paper analyzes macroeconomic downside risk by incorporating conditional skewness into growth forecasting models.'
