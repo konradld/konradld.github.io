@@ -4,8 +4,6 @@ collection: research
 category: workinprogress
 permalink: /publication/2025-testing-influential-sets
 excerpt: 'This paper develops a novel methodology for identifying and testing influential subsets of observations in econometric models.'
-date: 2025-01-01
-venue: 'Work in Progress'
 citation: 'Konrad, L.D., Kuschnig, N. (2025). &quot;Testing for Influential Sets.&quot; <i>Working Paper</i>.'
 ---
 
