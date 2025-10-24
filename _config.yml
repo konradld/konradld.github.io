@@ -23,7 +23,7 @@ repository               : "konradld.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "portrait_ldk.png"
   name             : "Lucas Darius KONRAD"
   pronouns         : # example: "she/her"  
   bio              : "PhD Candidate at Vienna University of Economics and Business"
