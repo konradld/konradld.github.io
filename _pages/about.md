@@ -9,7 +9,7 @@ redirect_from:
 
 I am a PhD Candidate at the [Vienna University of Economics and Business](https://www.wu.ac.at/en/).
 
-My research interests are econometric robustness and anomaly detection in economic data as well as economic risk and modelling dependency structures. 
+My research interests are *econometric robustness* and *anomaly detection* in economic data as well as *economic risk* and modelling *dependency structures*. 
 
 I am currently most engaged with theoretical work in the fields of machine learning and Bayesian statistics with applications to environmental and macro economics.
 
