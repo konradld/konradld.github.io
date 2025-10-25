@@ -4,6 +4,7 @@ collection: research
 category: workinprogress
 permalink: /publication/2025-redd-counterfactuals
 excerpt: 'This paper attempts to estimate counterfactual deforestation rates for evaluating REDD+ forest conservation programs using machine learning methods.'
+authors: "Wohak, U., Kuschnig, N., Vashold, L., Konrad, L.D."
 # citation: 'Wohak, U., Kuschnig, N., Vashold, L., Konrad, L.D. (2025). &quot;Random Forrest Protection - Estimating REDD+ Counterfactuals.&quot; <i>Unpublished Document</i>.'
 ---
 
