@@ -4,7 +4,7 @@ collection: research
 category: workinprogress
 permalink: /publication/2025-testing-influential-sets
 excerpt: 'This paper develops a novel methodology for testing influential subsets in linear regression.'
-authors: "Konrad, L.D., Kuschnig, N."
+authors: "Kuschnig, N., Konrad, L.D."
 # citation: 'Konrad, L.D., Kuschnig, N. (2025). &quot;Testing for Influential Sets.&quot; <i>Unpublished Document</i>.'
 ---
 
