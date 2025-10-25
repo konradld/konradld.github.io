@@ -15,6 +15,6 @@ authors: "Konrad, L.D., Vashold, L., Crespo Cuaresma, J."
 
 **Status:** Work in progress
 
-**Co-authors:** [Lukas Vashold](https://www.vashold.eu/), Jesús Crespo Cuaresma
+**Co-authors:** [Lukas Vashold](https://www.vashold.eu/), [Jesús Crespo Cuaresma](https://www.wu.ac.at/en/economics/people/crespo-j)
 
 **Keywords:** Panel Data, Structural Breaks, Bayesian Statistics, Indicator Saturation
