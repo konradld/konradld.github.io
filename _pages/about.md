@@ -13,4 +13,4 @@ My research interests are econometric robustness and anomaly detection in econom
 
 I am currently most engaged with theoretical work in the fields of machine learning and Bayesian statistics with applications to environmental and macro economics.
 
-You can find my CV [here](files/Curriculum_Vitae.pdf). Feel free to contact me via [mail](mailto:lucas.konrad@wu.ac.at).
+You can find my CV [here](files/Curriculum_Vitae.pdf). Feel free to contact me via [lucas.konrad@wu.ac.at](mailto:lucas.konrad@wu.ac.at).
