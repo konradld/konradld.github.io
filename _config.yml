@@ -91,6 +91,8 @@ publication_category:
     title: 'Work in Progress'
   conferences:
     title: 'Conference Papers'
+  software:
+    title: 'Software'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
