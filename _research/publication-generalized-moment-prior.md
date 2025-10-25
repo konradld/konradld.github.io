@@ -8,7 +8,6 @@ excerpt: 'This paper develops a novel Bayesian prior distribution that approxima
 #citation: 'Konrad, L.D. (2025). &quot;The Approximately Exact Generalized Moment Prior.&quot; <i>Unpublished Document</i>.'
 ---
 
-This paper introduces a new class of prior distributions for Bayesian inference that builts up on the Normal product Moment prior.
 
 **Presented at:** European Seminar on Bayesian Econometrics (ESOBE) 2025
 
