@@ -3,7 +3,7 @@ title: "Testing Most Influential Sets"
 collection: research
 category: preprint
 permalink: /publication/2025-testing-most-influential-sets
-excerpt: 'This paper advances the theory of influence diagnostics by establishing a rigorous methodology to test the presence of eccesively influential sets in linear models.'
+excerpt: 'This paper establishes the distribution of maximally influencial sets under the null hypothesis in linear models, allowing to test for excessive influence.'
 authors: "Konrad, L.D., Kuschnig, N."
 # date: 2025-10-24
 venue: 'arXiv (pre-print)'
