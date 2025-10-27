@@ -1,11 +1,12 @@
 ---
 permalink: /
-title: "Welcome!"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+# Welcome!
 
 I am a PhD Candidate at the [Vienna University of Economics and Business](https://www.wu.ac.at/en/).
 
