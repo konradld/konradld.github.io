@@ -1,7 +1,7 @@
 ---
 title: "Testing Most Influential Sets"
 collection: research
-category: preprint
+category: workingpaper
 permalink: /publication/2025-testing-most-influential-sets
 excerpt: 'This paper establishes the distribution of maximally influencial sets under the null hypothesis in linear models, allowing to test for excessive influence.'
 authors: "Konrad, L.D., Kuschnig, N."
