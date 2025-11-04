@@ -35,13 +35,13 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : "https://arxiv.org/a/konrad_l_1.html" # URL - Update with the correct link to your profile
-  googlescholar    : # URL
+  googlescholar    : "https://scholar.google.com/citations?view_op=list_works&hl=de&hl=de&user=qXwgJz0AAAAJ"# URL
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0001-5915-4798"
   semantic         : # URL
   pubmed           : # URL
-  researchgate     : # URL
+  researchgate     : "https://www.researchgate.net/profile/Lucas-Darius-Konrad" # URL
   scopus           : # URL
 
   # Repositories and software development
