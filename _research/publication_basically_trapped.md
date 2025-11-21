@@ -5,7 +5,7 @@ category: workingpaper
 permalink: /publication/2025-basically-trapped
 excerpt: 'This paper investigates the effects of subsidies in basic research by means of a general equilibrium model.'
 authors: "Konrad, L.D."
-# date: 2025-10-24
+# date: 2024-10-24
 venue: 'arXiv (pre-print)'
 paperurl: 
 citation: 'Konrad, L.D. (2024). &quot;Basically Trapped - A General Equilibrium Approach to the Undersupply of Basic Research in Free Markets&quot; <i>arXiv</i>.'
