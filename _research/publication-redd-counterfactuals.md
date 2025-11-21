@@ -10,6 +10,6 @@ authors: "Wohak, U., Kuschnig, N., Vashold, L., Konrad, L.D."
 
 **Status:** Work in progress
 
-**Co-authors:** [Ulrike Wohak](https://ulrichwohak.eu/), [Nikolas Kuschnig](https://www.kuschnig.eu/), [Lukas Vashold](https://www.vashold.eu/)
+**Co-authors:** [Ulrich Wohak](https://ulrichwohak.eu/), [Nikolas Kuschnig](https://www.kuschnig.eu/), [Lukas Vashold](https://www.vashold.eu/)
 
 **Keywords:** Environmental Risk, REDD+, Machine Learning, Causal Inference, Forest Conservation
