@@ -1,5 +1,6 @@
 ---
 title: "Testing Most Influential Sets"
+order: 1
 collection: research
 category: workingpaper
 permalink: /publication/2025-testing-most-influential-sets
