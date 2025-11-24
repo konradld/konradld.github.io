@@ -15,7 +15,8 @@ author_profile: true
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
-    {% for post in site.research reversed %}
+    {% assign sorted_research = site.research | sort: "order" %}
+    {% for post in sorted_research %}
       {% if post.category != category[0] %}
         {% continue %}
       {% endif %}
