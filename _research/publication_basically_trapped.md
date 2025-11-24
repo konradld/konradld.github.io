@@ -1,8 +1,8 @@
 ---
 title: "Basically Trapped - A General Equilibrium Approach to the Undersupply of Basic Research in Free Markets"
-order: 2
 collection: research
 category: workingpaper
+order: 2
 permalink: /publication/2024-basically-trapped
 excerpt: 'This paper investigates the effects of subsidies in basic research by means of a general equilibrium model.'
 authors: "Konrad, L.D."
