@@ -1,5 +1,6 @@
 ---
 title: "Basically Trapped - A General Equilibrium Approach to the Undersupply of Basic Research in Free Markets"
+order: 2
 collection: research
 category: workingpaper
 permalink: /publication/2024-basically-trapped
