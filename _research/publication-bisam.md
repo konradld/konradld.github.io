@@ -9,6 +9,7 @@ paperurl: 'https://github.com/konradld/bisam'
 # citation: 'Konrad, L.D., Goldmann, J. (2025). &quot;BISAM - Estimating Bayesian Indicator Saturated Models in R.&quot; <i>Unpublished Document</i>.'
 ---
 
+Check out my [Github repo](https://github.com/konradld/bisam)!
 
 **Status:** Work in progress
 
