@@ -52,3 +52,18 @@
 .list__item:last-child .archive__item {
   border-bottom: none;
 }
+
+/* Thinner fonts */
+body {
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 200;
+}
+
+p, li, td, th, span, a {
+  font-weight: 200;
+}
