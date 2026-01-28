@@ -1,13 +1,13 @@
 ---
 title: "Testing Most Influential Sets"
 collection: research
-category: workingpaper
+category: publication
 order: 1
 permalink: /publication/2025-testing-most-influential-sets
 excerpt: 'This paper establishes the distribution of maximally influencial sets in linear models, allowing to test for excessive influence.'
 authors: "Konrad, L.D., Kuschnig, N."
 # date: 2025-10-24
-venue: 'arXiv (pre-print)'
+venue: 'forthcoming in ICLR'
 paperurl: 'http://arxiv.org/abs/2510.20372'
 citation: 'Konrad, L.D., Kuschnig, N. (2025). &quot;Testing Most Influential Sets.&quot; <i>arXiv</i>.'
 ---
