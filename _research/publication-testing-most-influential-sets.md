@@ -1,7 +1,7 @@
 ---
 title: "Testing Most Influential Sets"
 collection: research
-category: publication
+category: paper
 order: 1
 permalink: /publication/2025-testing-most-influential-sets
 excerpt: 'This paper establishes the distribution of maximally influencial sets in linear models, allowing to test for excessive influence.'
