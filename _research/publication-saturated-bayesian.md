@@ -1,18 +1,22 @@
 ---
-title: "The Saturated Bayesian - Break Detection in Panel Data with Short Time Horizons"
+title: "Bayesian Indicator-Saturated Regression for Climate Policy Evaluation"
 collection: research
-category: workinprogress
+category: workingpaper
 permalink: /publication/2024-saturated-bayesian
-excerpt: 'This paper develops a maximally flexible Bayesian method for detecting structural breaks in panel data when the time dimension is limited.'
+excerpt: 'We introduce a maximally flexible Bayesian method for detecting structural breaks in panel data with applications in climate policy.'
 authors: "Konrad, L.D., Vashold, L., Crespo Cuaresma, J."
-# citation: 'Konrad, L.D., Vashold, L., Crespo Cuaresma, J. (2024). &quot;The Saturated Bayesian - Break Detection in Panel Data with Short Time Horizons.&quot; <i>Unpublished Document</i>.'
+venue: 'arXiv (pre-print)'
+paperurl: 'https://arxiv.org/abs/2603.04997'
+# citation: 'Konrad, L.D., Vashold, L., Crespo Cuaresma, J. (2026). &quot;Bayesian Indicator-Saturated Regression for Climate Policy Evaluation&quot; <i>arXiv</i>.'
 ---
-**Abstract:** Effectively tackling contemporary challenges posed by climate change and the continued degradation of natural habitats requires swift and decisive actions. Identifying the most effective policies (or a mix thereof) is crucial to inform policy-makers that are often constrained in their choice set. Traditional methods for policy evaluation rely on precise knowledge about the occurrence and timing of interventions. Structural break identification on the other hand has a long tradition in the field of econometrics. Recent approaches cast the search for such breaks in the form of indicator-saturated regressions, identifying step-shifts in relevant time series, but lack a proper framework of uncertainty quantification. We introduce a coherent probabilistic framework for the detection of structural breaks with unknown timing in panel data. The proposed Bayesian setup naturally incorporates the quantification of break uncertainty with little overhead. Simulation studies demonstrate that our approach is competitive to existing approaches in detecting true positives and drastically reduces false positives. We apply our method to replicate studies on the effectiveness of climate policies in the European transport sector and provide novel insights in the dynamics of deforestation in the tropics.
+**Abstract:** Structural break identification methods are an important tool for evaluating the effectiveness of climate change mitigation policies. In this paper, we introduce a unified probabilistic framework for detecting structural breaks with unknown timing and arbitrary sequence in longitudinal data. The proposed Bayesian setup uses indicator-saturated regression and a spike-and-slab prior with an inverse-moment density as the slab component to ensure model selection consistency. Simulation results show that the method outperforms comparable frequentist approaches, particularly in environments with a high probability of structural breaks. We apply the framework to identify and evaluate the effects of climate policies in the European road transport sector. 
 
 **Presented at:** 
 - What Works Climate Solutions (WWCS) 2024
 - International Society for Bayesian Analysis (ISBA) World Meeting 2024
 - European Seminar on Bayesian Econometrics (ESOBE) 2024
+- University of Melbourne - Econometrics Seminar 2025
+- Monash University - EBS seminar 2025
 
 **Status:** Work in progress
 
