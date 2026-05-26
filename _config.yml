@@ -84,7 +84,7 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'
+    title: 'Publications'
   workingpaper:
     title: 'Working Papers'    
   workinprogress:
