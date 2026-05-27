@@ -55,6 +55,12 @@
     margin-top: 1em;
     border-bottom: none;
   }
+
+  .archive h2 {
+    border-bottom: none;
+    padding-bottom: 0.1em;
+    margin-bottom: 0.1em;
+  }
 }
 
 .archive__item-excerpt {
@@ -75,30 +81,23 @@
     font-size: $type-size-6;
     color: var(--global-link-color);
     user-select: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    &:hover { text-decoration: underline; }
   }
 
-  .archive__item-excerpt {
-    margin-top: 0.5em;
-  }
+  .archive__item-excerpt { margin-top: 0.5em; }
 }
 
 .archive__item-citation {
-  font-size: $type-size-7;
   color: var(--global-text-color-light);
-
-  a {
-    color: var(--global-link-color);
-  }
+  p { font-size: $type-size-7; }   /* explicit — overrides .page__content p { font-size: 1em } */
+  a { color: var(--global-link-color); }
 }
 
 hr.section-divider {
-  border: none;
-  border-top: 3px solid var(--global-text-color);
-  margin: 0.5em 0 1.5em;
+  border: 0;
+  height: 3px;                        /* background-color approach avoids border override issues */
+  background-color: var(--global-text-color);
+  margin: 0.1em 0 1em;
 }
 
 .archive__item-teaser {
