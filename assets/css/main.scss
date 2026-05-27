@@ -43,9 +43,9 @@
 ;
 
 .archive__item {
-  padding-bottom: 1.5em;
-  margin-bottom: 1.5em;
-  border-bottom: 1px solid var(--global-border-color);
+  padding-bottom: 0.75em;
+  margin-bottom: 0.25em;
+  border-bottom: 1px dashed var(--global-border-color);
 }
 
 /* Remove border from last item */
