@@ -65,7 +65,7 @@
 
 .archive__item-excerpt {
   margin-top: 0;
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 
   & + p {
     text-indent: 0;
@@ -78,7 +78,7 @@
 
   summary {
     cursor: pointer;
-    font-size: $type-size-6;
+    font-size: $type-size-5;
     color: var(--global-link-color);
     user-select: none;
     &:hover { text-decoration: underline; }
@@ -89,7 +89,7 @@
 
 .archive__item-citation {
   color: var(--global-text-color-light);
-  p { font-size: $type-size-7; }   /* explicit — overrides .page__content p { font-size: 1em } */
+  p { font-size: $type-size-6; }   /* explicit — overrides .page__content p { font-size: 1em } */
   a { color: var(--global-link-color); }
 }
 
