@@ -1,0 +1,104 @@
+diff --git a/_includes/archive-single.html b/_includes/archive-single.html
+index 5d4029d..4e8c648 100644
+--- a/_includes/archive-single.html
++++ b/_includes/archive-single.html
+@@ -51,11 +51,18 @@
+         {% endif %}
+ 
+     {% if post.excerpt and site.read_more != 'enabled' %}
+-    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
++    <details class="archive__item-abstract">
++      <summary>Abstract</summary>
++      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
++    </details>
+     {% elsif post.excerpt and site.read_more == 'enabled' %}
+-    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<em><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></em></p></p>
++    <details class="archive__item-abstract">
++      <summary>Abstract</summary>
++      <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<em><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></em></p></p>
++    </details>
+     {% endif %}
+-    
++
++    <div class="archive__item-citation">
+     {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
+       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+     {% elsif post.citation and post.paperurl and post.slidesurl %}
+@@ -83,6 +90,7 @@
+     {% elsif post.bibtexurl %}
+       <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+     {% endif %}
++    </div>
+ 
+   </article>
+ </div>
+diff --git a/_pages/publications.html b/_pages/publications.html
+index 6fe9388..f8e65fb 100644
+--- a/_pages/publications.html
++++ b/_pages/publications.html
+@@ -23,7 +23,7 @@ author_profile: true
+         {% continue %}
+       {% endif %}
+       {% unless title_shown %}
+-        <h2>{{ category[1].title }}</h2><hr />
++        <h2>{{ category[1].title }}</h2><hr class="section-divider" />
+         {% assign title_shown = true %}
+       {% endunless %}
+       {% include archive-single.html %}
+diff --git a/_sass/layout/_archive.scss b/_sass/layout/_archive.scss
+index d1a17c1..7481e19 100644
+--- a/_sass/layout/_archive.scss
++++ b/_sass/layout/_archive.scss
+@@ -66,6 +66,41 @@
+   }
+ }
+ 
++.archive__item-abstract {
++  margin-top: 0.4em;
++  margin-bottom: 0.4em;
++
++  summary {
++    cursor: pointer;
++    font-size: $type-size-6;
++    color: var(--global-link-color);
++    user-select: none;
++
++    &:hover {
++      text-decoration: underline;
++    }
++  }
++
++  .archive__item-excerpt {
++    margin-top: 0.5em;
++  }
++}
++
++.archive__item-citation {
++  font-size: $type-size-7;
++  color: var(--global-text-color-light);
++
++  a {
++    color: var(--global-link-color);
++  }
++}
++
++hr.section-divider {
++  border: none;
++  border-top: 3px solid var(--global-text-color);
++  margin: 0.5em 0 1.5em;
++}
++
+ .archive__item-teaser {
+   border-radius: $border-radius;
+   overflow: hidden;
+@@ -90,6 +125,10 @@
+    ========================================================================== */
+ 
+ .list__item {
++  border-bottom: 1px dashed var(--global-border-color);
++  padding-bottom: 1em;
++  margin-bottom: 0.5em;
++
+   @include breakpoint($medium) {
+     padding-right: $right-sidebar-width-narrow;
+   }
