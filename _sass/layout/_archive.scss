@@ -66,6 +66,41 @@
   }
 }
 
+.archive__item-abstract {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+
+  summary {
+    cursor: pointer;
+    font-size: $type-size-6;
+    color: var(--global-link-color);
+    user-select: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .archive__item-excerpt {
+    margin-top: 0.5em;
+  }
+}
+
+.archive__item-citation {
+  font-size: $type-size-7;
+  color: var(--global-text-color-light);
+
+  a {
+    color: var(--global-link-color);
+  }
+}
+
+hr.section-divider {
+  border: none;
+  border-top: 3px solid var(--global-text-color);
+  margin: 0.5em 0 1.5em;
+}
+
 .archive__item-teaser {
   border-radius: $border-radius;
   overflow: hidden;
@@ -90,6 +125,10 @@
    ========================================================================== */
 
 .list__item {
+  border-bottom: 1px dashed var(--global-border-color);
+  padding-bottom: 1em;
+  margin-bottom: 0.5em;
+
   @include breakpoint($medium) {
     padding-right: $right-sidebar-width-narrow;
   }
