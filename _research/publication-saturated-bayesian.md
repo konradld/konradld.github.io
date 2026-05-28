@@ -4,7 +4,8 @@ collection: research
 category: workingpaper
 permalink: /publication/2024-saturated-bayesian
 excerpt: 'We introduce a maximally flexible Bayesian method for detecting structural breaks in panel data with applications in climate policy.'
-authors: "Konrad, L.D., Vashold, L., Crespo Cuaresma, J."
+authors: "Konrad, L.D., [Vashold, L.](https://www.vashold.eu/), [Crespo Cuaresma, J.](https://www.wu.ac.at/en/economics/people/crespo-j)"
+date: 2026-03-05
 venue: 'arXiv (pre-print)'
 paperurl: 'https://arxiv.org/abs/2603.04997'
 citation: 'Konrad, L.D., Vashold, L., Crespo Cuaresma, J. (2026). &quot;Bayesian Indicator-Saturated Regression for Climate Policy Evaluation&quot; <i>arXiv</i>.'
