@@ -69,13 +69,25 @@
   font-size: $type-size-5;
 
   & + p {
-    text-indent: 0;
+    text-indent: 1;
+  }
+}
+
+.archive__item-authors {
+  font-weight: 300;
+
+  a {
+    color: var(--global-text-color);
+    &:hover {
+      color: var(--global-link-color-hover);
+      text-decoration: underline;
+    }
   }
 }
 
 .archive__item-abstract {
-  margin-top: 0.2em;
-  margin-bottom: 0.2em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
 
   summary {
     cursor: pointer;
@@ -88,7 +100,7 @@
     }
   }
 
-  .archive__item-excerpt { margin-top: 0.5em; }
+  .archive__item-excerpt { margin-top: 0.1em; }
 }
 
 .archive__item-citation {
@@ -129,7 +141,7 @@ hr.section-divider {
 
 .archive__item {
   p {
-    margin-bottom: 0.3em;
+    margin-bottom: 0.2em;
   }
 }
 
