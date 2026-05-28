@@ -15,10 +15,11 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
+      color: var(--global-link-color-hover);
 
       img {
         box-shadow: 0 0 10px rgba(#000, 0.25);
@@ -52,7 +53,7 @@
 .page__content {
 
   .archive__item-title {
-    margin-top: 1em;
+    margin-top: 0.5em;
     border-bottom: none;
   }
 
@@ -123,10 +124,16 @@ hr.section-divider {
    List view
    ========================================================================== */
 
+.archive__item {
+  p {
+    margin-bottom: 0.3em;
+  }
+}
+
 .list__item {
   border-bottom: 1px solid var(--global-border-color);
-  padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.2em;
 
   @include breakpoint($medium) {
     padding-right: $right-sidebar-width-narrow;
