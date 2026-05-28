@@ -22,7 +22,7 @@
       color: var(--global-link-color-hover);
 
       img {
-        box-shadow: 0 0 10px rgba(#000, 0.25);
+        box-shadow: 0 0 40px rgba(#000, 0.40);
       }
     }
   }
@@ -79,19 +79,22 @@
 
   summary {
     cursor: pointer;
-    font-size: $type-size-6;
+    font-size: $type-size-5;
     color: var(--global-link-color);
     user-select: none;
-    &:hover { text-decoration: underline; }
+    &:hover {
+      text-decoration: underline;
+      color: var(--global-link-color-hover);
+    }
   }
 
   .archive__item-excerpt { margin-top: 0.5em; }
 }
 
 .archive__item-citation {
-  color: var(--global-text-color-light);
+  color: var(--global-text-color);
   p { font-size: $type-size-6; }   /* explicit — overrides .page__content p { font-size: 1em } */
-  a { color: var(--global-text-color); }
+  a { color: var(--global-link-color); }
 }
 
 hr.section-divider {
