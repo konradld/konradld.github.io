@@ -38,19 +38,21 @@ $sidebar-screen-min-width   : 1024px;
 @keyframes link-glow-pulse {
   0%, 100% {
     text-shadow:
-      0 0 6px #{$primary-color},
-      0 0 14px #{$primary-color},
-      0 0 28px #{$primary-color},
-      0 0 50px #{$primary-color},
-      0 0 80px rgba(0, 173, 181, 0.6);
+      0 0 4px #{$primary-color},
+      0 0 10px #{$primary-color},
+      0 0 20px #{$primary-color},
+      0 0 35px rgba(0, 173, 181, 0.3),
+      0 0 60px rgba(0, 173, 181, 0.15);
   }
-  25% {
+  50% {
     text-shadow:
-      0 0 12px #{$primary-color},
-      0 0 30px #{$primary-color},
+      0 0 6px #fff,
+      0 0 14px #fff,
+      0 0 28px #{$primary-color},
       0 0 60px #{$primary-color},
       0 0 100px #{$primary-color},
-      0 0 160px rgba(0, 173, 181, 0.9);
+      0 0 160px #{$primary-color},
+      0 0 220px rgba(0, 173, 181, 1);
   }
 }
 
