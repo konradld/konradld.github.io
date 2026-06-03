@@ -77,16 +77,4 @@ html[data-theme="dark"] {
 
 html[data-theme="dark"] a {
   animation: link-glow-pulse 2s ease-in-out infinite;
-  display: inline-block; /* required for transform to work on inline elements */
-  
-  @keyframes link-glow-pulse {
-    0%, 100% {
-      transform: scale(1);
-      text-shadow: /* dim state */;
-    }
-    50% {
-      transform: scale(1.03);
-      text-shadow: /* bright state */;
-    }
-  }
 }
