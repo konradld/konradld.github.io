@@ -34,6 +34,14 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
+/* Rotate animation for dark mode profile picture */
+@keyframes avatar-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Glow pulse animation for dark mode links */
+
 /* Glow pulse animation for dark mode links */
 @keyframes link-glow-pulse {
   0%, 100% {
@@ -77,4 +85,8 @@ html[data-theme="dark"] {
 
 html[data-theme="dark"] a {
   animation: link-glow-pulse 2s ease-in-out infinite;
+}
+
+html[data-theme="dark"] .author__avatar img {
+    animation: avatar-rotate 8s linear infinite;
 }
