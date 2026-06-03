@@ -40,19 +40,17 @@ $sidebar-screen-min-width   : 1024px;
     text-shadow:
       0 0 4px #{$primary-color},
       0 0 10px #{$primary-color},
-      0 0 20px #{$primary-color},
-      0 0 35px rgba(0, 173, 181, 0.3),
-      0 0 60px rgba(0, 173, 181, 0.15);
+      0 0 25px #{$primary-color},
+      0 0 40px #{$primary-color},
+      0 0 65px rgba(0, 173, 181, 0.6);
   }
   50% {
     text-shadow:
-      0 0 6px #fff,
-      0 0 14px #fff,
-      0 0 28px #{$primary-color},
+      0 0 12px #{$primary-color},
+      0 0 30px #{$primary-color},
       0 0 60px #{$primary-color},
       0 0 100px #{$primary-color},
-      0 0 160px #{$primary-color},
-      0 0 220px rgba(0, 173, 181, 1);
+      0 0 160px rgba(0, 173, 181, 0.9);
   }
 }
 
@@ -78,5 +76,17 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="dark"] a {
-    animation: link-glow-pulse 2s ease-in-out infinite;
+  animation: link-glow-pulse 2s ease-in-out infinite;
+  display: inline-block; /* required for transform to work on inline elements */
+  
+  @keyframes link-glow-pulse {
+    0%, 100% {
+      transform: scale(1);
+      text-shadow: /* dim state */;
+    }
+    50% {
+      transform: scale(1.03);
+      text-shadow: /* bright state */;
+    }
+  }
 }
