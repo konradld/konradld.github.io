@@ -80,33 +80,46 @@
     {% assign paper_link_text = "Download Paper" %}
     {% if post.category == 'software' %}{% assign paper_link_text = "Check out GitHub" %}{% endif %}
 
-    <div class="archive__item-citation">
-    {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">{{ paper_link_text }}</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
-    {% elsif post.citation and post.paperurl and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">{{ paper_link_text }}</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
-    {% elsif post.citation and post.paperurl and post.bibtexurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">{{ paper_link_text }}</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
-    {% elsif post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">{{ paper_link_text }}</a></p>
-    {% elsif post.citation and post.slidesurl and post.bibtexurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl}}">Download Bibtex</a></p>
-    {% elsif post.citation and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a></p>
-    {% elsif post.citation and post.bibtexurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
-    {% elsif post.citation %}
+        <div class="archive__item-citation">
+    {% if post.citation %}
       <p>Recommended citation: {{ post.citation }}</p>
-    {% elsif post.paperurl and post.bibtexurl %}
-      <p><a href=" {{ post.paperurl }} ">{{ paper_link_text }}</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
-    {% elsif post.paperurl %}
-      <p><a href=" {{ post.paperurl }} ">{{ paper_link_text }}</a></p>
-    {% elsif post.slidesurl and post.bibtexurl %}
-      <p><a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
-    {% elsif post.slidesurl %}
-      <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
-    {% elsif post.bibtexurl %}
-      <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% endif %}
+
+    {% assign has_links = false %}
+    {% if post.paperurl or post.slidesurl or post.bibtexurl or post.repo_url %}
+      {% assign has_links = true %}
+    {% endif %}
+
+    {% if has_links %}
+      <p>
+      {% assign pipe = false %}
+
+      {% if post.paperurl %}
+        {% if post.category == 'software' %}
+          <a href="{{ post.paperurl }}"><i class="fab fa-github" aria-hidden="true"></i> Check out GitHub</a>
+        {% else %}
+          <a href="{{ post.paperurl }}"><i class="fa fa-file-alt" aria-hidden="true"></i> Download Paper</a>
+        {% endif %}
+        {% assign pipe = true %}
+      {% endif %}
+
+      {% if post.repo_url %}
+        {% if pipe %} | {% endif %}
+        <a href="{{ post.repo_url }}" style="color: #f05133;"><i class="fab fa-github" aria-hidden="true"></i> GitHub Repository</a>
+        {% assign pipe = true %}
+      {% endif %}
+
+      {% if post.slidesurl %}
+        {% if pipe %} | {% endif %}
+        <a href="{{ post.slidesurl }}">Download Slides</a>
+        {% assign pipe = true %}
+      {% endif %}
+
+      {% if post.bibtexurl %}
+        {% if pipe %} | {% endif %}
+        <a href="{{ post.bibtexurl }}">Download Bibtex</a>
+      {% endif %}
+      </p>
     {% endif %}
     </div>
 
