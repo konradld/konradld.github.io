@@ -9,6 +9,7 @@ authors: "Konrad, L.D., [Kuschnig, N.](https://www.kuschnig.eu/)"
 date: 2026-07-05
 venue: 'Proceedings of the International Conference on Machine Learning (ICML)'
 paperurl: 'https://openreview.net/forum?id=ghd0zmtpB9'
+repo_url: 'https://github.com/nk027/findingMIS'
 citation: 'Konrad, L.D., Kuschnig, N. (2026). &quot; Finding Most Influential Sets.&quot; <i>Proceedings of the International Conference on Machine Learning (ICML)</i>.'
 ---
 **Abstract:** Identifying \emph{most influential sets} (MIS) --- size-k subsets whose removal maximally changes a target estimand --- is typically infeasible because it requires searching over n choose k subsets.
@@ -18,6 +19,6 @@ For fixed residualized inputs, the algorithm returns a globally optimal set for 
 With estimated nuisance functions, uniform denominator and generated-score stability imply approximation to the first-order oracle orthogonal-score objective; exact set recovery follows under a separation condition.
 Simulations and applications show that the method recovers exact MIS that were previously computationally inaccessible.
 
-**Status:** forthcoming
+**Status:** published
 
 **Co-author:** [Nikolas Kuschnig](https://www.kuschnig.eu/)
