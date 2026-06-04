@@ -117,7 +117,7 @@
 
       {% if post.bibtexurl %}
         {% if pipe %} | {% endif %}
-        <a href="{{ post.bibtexurl }}">Download Bibtex</a>
+        <a href="{{ post.bibtexurl }}" class="bibtex-link"><i class="fa fa-file-code" aria-hidden="true"></i> Download Bibtex</a>
       {% endif %}
       </p>
     {% endif %}
