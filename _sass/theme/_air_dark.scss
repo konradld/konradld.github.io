@@ -70,10 +70,10 @@ $bibtex-link-color: #e6b800;
 @keyframes repo-link-glow-pulse {
   0%, 100% {
     text-shadow:
-      0 0 4px #{$repo-link-color},
-      0 0 10px #{$repo-link-color},
-      0 0 25px #{$repo-link-color},
-      0 0 40px rgba($repo-link-color, 0.6);
+      0 0 2px #{$repo-link-color},
+      0 0 5px #{$repo-link-color},
+      0 0 12px #{$repo-link-color},
+      0 0 20px rgba($repo-link-color, 0.6);
   }
   50% {
     text-shadow:
@@ -88,10 +88,10 @@ $bibtex-link-color: #e6b800;
 @keyframes bibtex-link-glow-pulse {
   0%, 100% {
     text-shadow:
-      0 0 4px #{$bibtex-link-color},
-      0 0 10px #{$bibtex-link-color},
-      0 0 25px #{$bibtex-link-color},
-      0 0 40px rgba($bibtex-link-color, 0.6);
+      0 0 2px #{$bibtex-link-color},
+      0 0 5px #{$bibtex-link-color},
+      0 0 12px #{$bibtex-link-color},
+      0 0 20px rgba($bibtex-link-color, 0.6);
   }
   50% {
     text-shadow:
