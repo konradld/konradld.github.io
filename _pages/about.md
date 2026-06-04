@@ -14,5 +14,4 @@ I am a PhD Candidate at the [Vienna University of Economics and Business](https:
 
 My research interests are *econometric robustness* and *anomaly detection* in economic data as well as *economic risk* and modelling *dependency structures*.
 
-You can find a PDF version of my CV [here](files/Curriculum_Vitae.pdf). Feel free to contact me via [lucas.konrad@wu.ac.at](mailto:lucas.konrad@wu.ac.at).
 You can find a PDF version of my <a href="files/Curriculum_Vitae.pdf"><i class="fa fa-file-pdf" aria-hidden="true"></i> CV here</a>. Feel free to contact me via <a href="mailto:lucas.konrad@wu.ac.at"><i class="fa fa-envelope" aria-hidden="true"></i> lucas.konrad@wu.ac.at</a>.
