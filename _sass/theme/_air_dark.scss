@@ -77,10 +77,10 @@ $bibtex-link-color: #e6b800;
   }
   50% {
     text-shadow:
-      0 0 12px #{$repo-link-color},
-      0 0 30px #{$repo-link-color},
+      0 0 24px #{$repo-link-color},
       0 0 60px #{$repo-link-color},
-      0 0 100px rgba($repo-link-color, 0.9);
+      0 0 120px #{$repo-link-color},
+      0 0 200px rgba($repo-link-color, 0.9);
   }
 }
 
