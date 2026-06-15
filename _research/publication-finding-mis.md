@@ -10,6 +10,7 @@ date: 2026-07-05
 venue: 'Proceedings of the International Conference on Machine Learning (ICML)'
 paperurl: 'https://openreview.net/forum?id=ghd0zmtpB9'
 repo_url: 'https://github.com/nk027/findingMIS'
+bibtexurl: '/bib/finding-mis.txt'
 citation: 'Konrad, L.D., Kuschnig, N. (2026). &quot; Finding Most Influential Sets.&quot; <i>Proceedings of the International Conference on Machine Learning (ICML)</i>.'
 ---
 **Abstract:** Identifying \emph{most influential sets} (MIS) --- size-k subsets whose removal maximally changes a target estimand --- is typically infeasible because it requires searching over n choose k subsets.

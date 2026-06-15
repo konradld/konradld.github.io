@@ -1,0 +1,9 @@
+@misc{konrad2024basicallytrapped,
+  title        = {Basically Trapped -- A General Equilibrium Approach to the Undersupply of Basic Research in Free Markets},
+  author       = {Konrad, Lucas D.},
+  year         = {2024},
+  eprint       = {2511.17251},
+  archiveprefix = {arXiv},
+  primaryclass = {econ.GN},
+  url          = {https://arxiv.org/abs/2511.17251}
+}

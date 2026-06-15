@@ -1,0 +1,7 @@
+@inproceedings{konrad2026findingmis,
+  title        = {Finding Most Influential Sets},
+  author       = {Konrad, Lucas D. and Kuschnig, Nikolas},
+  booktitle    = {Proceedings of the International Conference on Machine Learning (ICML)},
+  year         = {2026},
+  url          = {https://openreview.net/forum?id=ghd0zmtpB9}
+}

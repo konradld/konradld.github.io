@@ -1,0 +1,9 @@
+@misc{konrad2026saturatedbayesian,
+  title        = {Bayesian Indicator-Saturated Regression for Climate Policy Evaluation},
+  author       = {Konrad, Lucas D. and Vashold, Lukas and {Crespo Cuaresma}, Jes{\'u}s},
+  year         = {2026},
+  eprint       = {2603.04997},
+  archiveprefix = {arXiv},
+  primaryclass = {stat.ME},
+  url          = {https://arxiv.org/abs/2603.04997}
+}
