@@ -21,7 +21,7 @@ citation: 'Konrad, L.D., Vashold, L., Crespo Cuaresma, J. (2026). &quot;Bayesian
 - University of Melbourne - Econometrics Seminar 2025
 - Monash University - EBS seminar 2025
 
-**Status:** Under Review
+**Status:** Conditional Accept at The Econometrics Journal
 **Co-authors:** [Lukas Vashold](https://www.vashold.eu/), [Jesús Crespo Cuaresma](https://www.wu.ac.at/en/economics/people/crespo-j)
 
 **Keywords:** Panel Data, Structural Breaks, Bayesian Statistics, Indicator Saturation
