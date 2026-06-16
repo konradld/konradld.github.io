@@ -34,15 +34,18 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Rotate animation for dark mode profile picture */
+/* Bespoke link color — change this to restyle all GitHub repo and Bibtex link glows */
+
+$repo-link-color: #00e6a9;
+$bibtex-link-color: #e6b800;
+
+/* ---- Party mode animations ---- */
+
 @keyframes avatar-rotate {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
 
-/* Glow pulse animation for dark mode links */
-
-/* Glow pulse animation for dark mode links */
 @keyframes link-glow-pulse {
   0%, 100% {
     text-shadow:
@@ -62,11 +65,6 @@ $sidebar-screen-min-width   : 1024px;
   }
 }
 
-/* Bespoke link color — change this to restyle all GitHub repo and Bibtex link glows */
-$repo-link-color: #00e6a9;
-$bibtex-link-color: #e6b800;
-
-/* Glow pulse animation for repo/GitHub links */
 @keyframes repo-link-glow-pulse {
   0%, 100% {
     text-shadow:
@@ -84,7 +82,6 @@ $bibtex-link-color: #e6b800;
   }
 }
 
-/* Glow pulse animation for BibTeX links */
 @keyframes bibtex-link-glow-pulse {
   0%, 100% {
     text-shadow:
@@ -102,10 +99,20 @@ $bibtex-link-color: #e6b800;
   }
 }
 
+@keyframes disco-glow {
+  0%   { text-shadow: 0 0 6px #ff0080, 0 0 18px #ff0080; color: #ff0080; }
+  16%  { text-shadow: 0 0 6px #ff8000, 0 0 18px #ff8000; color: #ff8000; }
+  33%  { text-shadow: 0 0 6px #ffff00, 0 0 18px #ffff00; color: #ffff00; }
+  50%  { text-shadow: 0 0 6px #00ff80, 0 0 18px #00ff80; color: #00ff80; }
+  66%  { text-shadow: 0 0 6px #0080ff, 0 0 18px #0080ff; color: #0080ff; }
+  83%  { text-shadow: 0 0 6px #8000ff, 0 0 18px #8000ff; color: #8000ff; }
+  100% { text-shadow: 0 0 6px #ff0080, 0 0 18px #ff0080; color: #ff0080; }
+}
 
+/* ---- Shared CSS variables for dark and party modes ---- */
 
-/* Dark theme for the site */
-html[data-theme="dark"] {
+html[data-theme="dark"],
+html[data-theme="party"] {
     --global-base-color                 : #{$background};
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$footer};
@@ -127,20 +134,26 @@ html[data-theme="dark"] {
     --bibtex-link-color                 : #{$bibtex-link-color};
 }
 
-html[data-theme="dark"] a {
+/* ---- Party mode: all the flashy stuff ---- */
+
+html[data-theme="party"] a {
   animation: link-glow-pulse 2s ease-in-out infinite;
 }
 
-html[data-theme="dark"] a.repo-link {
+html[data-theme="party"] a.repo-link {
   color: var(--repo-link-color);
   animation: repo-link-glow-pulse 3s ease-in-out infinite;
 }
 
-html[data-theme="dark"] a.bibtex-link {
+html[data-theme="party"] a.bibtex-link {
   color: var(--bibtex-link-color);
   animation: bibtex-link-glow-pulse 2.5s ease-in-out infinite;
 }
 
-html[data-theme="dark"] .author__avatar img {
-    animation: avatar-rotate 60s linear infinite;
+html[data-theme="party"] .author__avatar img {
+  animation: avatar-rotate 60s linear infinite;
+}
+
+html[data-theme="party"] #theme-icon {
+  animation: disco-glow 1.5s linear infinite;
 }

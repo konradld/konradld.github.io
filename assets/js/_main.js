@@ -2,15 +2,15 @@
    Various functions that we want to use within the template
    ========================================================================== */
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
+// Determine the expected state of the theme toggle, which can be "dark", "light", "party",
+// or "system". Default is "system".
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
-  return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
+  return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "party" && themeSetting != "system") ? "system" : themeSetting;
 };
 
-// Determine the computed theme, which can be "dark" or "light". If the theme setting is
-// "system", the computed theme is determined based on the user's system preference.
+// Determine the computed theme, which can be "dark", "light", or "party". If the theme
+// setting is "system", the computed theme is based on the user's system preference.
 let determineComputedTheme = () => {
   let themeSetting = determineThemeSetting();
   if (themeSetting != "system") {
@@ -30,19 +30,22 @@ let setTheme = (theme) => {
     $("html").attr("data-theme") ||
     browserPref;
 
-  if (use_theme === "dark") {
+  if (use_theme === "party") {
+    $("html").attr("data-theme", "party");
+    $("#theme-icon").removeClass("fa-moon fa-sun").addClass("fa-star");
+  } else if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
-    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
+    $("#theme-icon").removeClass("fa-moon fa-star").addClass("fa-sun");
   } else if (use_theme === "light") {
     $("html").removeAttr("data-theme");
-    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
+    $("#theme-icon").removeClass("fa-sun fa-star").addClass("fa-moon");
   }
 };
 
-// Toggle the theme manually
+// Toggle the theme manually: light → dark → party → light
 var toggleTheme = () => {
   const current_theme = $("html").attr("data-theme");
-  const new_theme = current_theme === "dark" ? "light" : "dark";
+  const new_theme = current_theme === "dark" ? "party" : current_theme === "party" ? "light" : "dark";
   localStorage.setItem("theme", new_theme);
   setTheme(new_theme);
 };
