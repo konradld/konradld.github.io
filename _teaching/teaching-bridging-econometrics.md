@@ -4,7 +4,7 @@ collection: teaching
 type: "Graduate course"
 permalink: /teaching/bridging-econometrics
 venue: "WU Vienna, Department of Economics"
-date: 2025-09-01
+date: 2025-09-01,2026-09-01
 location: "Vienna, Austria"
 ---
 
