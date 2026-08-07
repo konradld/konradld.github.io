@@ -39,7 +39,23 @@ $sidebar-screen-min-width   : 1024px;
 $repo-link-color: #00e6a9;
 $bibtex-link-color: #e6b800;
 
-/* ---- Party mode animations ---- */
+/* ---- Party mode animations ----
+
+   Performance note: `text-shadow` is a paint-only property — it can never be
+   handed to the GPU compositor, so every frame re-rasterises the text *and*
+   the whole blurred area around it. Two things drive that cost:
+
+     1. The blur radius. The rect the browser has to repaint is the glyph box
+        inflated by the largest radius in the list, so a 160px glow on a link
+        invalidates ~320px in every direction around it. With dozens of links
+        on a page those rects overlap into a full-viewport repaint per frame.
+     2. The number of shadows in the list — each one is a separate blur pass.
+
+   So the pulses below stay, but the radii are kept ≤ 24px and each keyframe
+   lists two shadows instead of five. Together that is roughly a 40x cut in
+   per-frame paint work while the glow still visibly breathes. If you want a
+   punchier pulse, raise the *opacity* delta between the two keyframes rather
+   than the radius — opacity is nearly free, radius is not. */
 
 @keyframes avatar-rotate {
   from { transform: rotate(0deg); }
@@ -50,18 +66,12 @@ $bibtex-link-color: #e6b800;
   0%, 100% {
     text-shadow:
       0 0 2px #{$primary-color},
-      0 0 5px #{$primary-color},
-      0 0 12px #{$primary-color},
-      0 0 20px #{$primary-color},
-      0 0 35px rgba(0, 173, 181, 0.6);
+      0 0 6px rgba(0, 173, 181, 0.45);
   }
   50% {
     text-shadow:
-      0 0 12px #{$primary-color},
-      0 0 30px #{$primary-color},
-      0 0 60px #{$primary-color},
-      0 0 100px #{$primary-color},
-      0 0 160px rgba(0, 173, 181, 0.9);
+      0 0 6px #{$primary-color},
+      0 0 20px rgba(0, 173, 181, 0.95);
   }
 }
 
@@ -69,16 +79,12 @@ $bibtex-link-color: #e6b800;
   0%, 100% {
     text-shadow:
       0 0 2px #{$repo-link-color},
-      0 0 5px #{$repo-link-color},
-      0 0 12px #{$repo-link-color},
-      0 0 20px rgba($repo-link-color, 0.6);
+      0 0 7px rgba($repo-link-color, 0.45);
   }
   50% {
     text-shadow:
-      0 0 24px #{$repo-link-color},
-      0 0 60px #{$repo-link-color},
-      0 0 120px #{$repo-link-color},
-      0 0 200px rgba($repo-link-color, 0.9);
+      0 0 7px #{$repo-link-color},
+      0 0 24px rgba($repo-link-color, 0.95);
   }
 }
 
@@ -86,27 +92,23 @@ $bibtex-link-color: #e6b800;
   0%, 100% {
     text-shadow:
       0 0 2px #{$bibtex-link-color},
-      0 0 5px #{$bibtex-link-color},
-      0 0 12px #{$bibtex-link-color},
-      0 0 20px rgba($bibtex-link-color, 0.6);
+      0 0 7px rgba($bibtex-link-color, 0.45);
   }
   50% {
     text-shadow:
-      0 0 12px #{$bibtex-link-color},
-      0 0 30px #{$bibtex-link-color},
-      0 0 60px #{$bibtex-link-color},
-      0 0 100px rgba($bibtex-link-color, 0.9);
+      0 0 7px #{$bibtex-link-color},
+      0 0 24px rgba($bibtex-link-color, 0.95);
   }
 }
 
 @keyframes disco-glow {
-  0%   { text-shadow: 0 0 6px #ff0080, 0 0 18px #ff0080; color: #ff0080; }
-  16%  { text-shadow: 0 0 6px #ff8000, 0 0 18px #ff8000; color: #ff8000; }
-  33%  { text-shadow: 0 0 6px #ffff00, 0 0 18px #ffff00; color: #ffff00; }
-  50%  { text-shadow: 0 0 6px #00ff80, 0 0 18px #00ff80; color: #00ff80; }
-  66%  { text-shadow: 0 0 6px #0080ff, 0 0 18px #0080ff; color: #0080ff; }
-  83%  { text-shadow: 0 0 6px #8000ff, 0 0 18px #8000ff; color: #8000ff; }
-  100% { text-shadow: 0 0 6px #ff0080, 0 0 18px #ff0080; color: #ff0080; }
+  0%   { text-shadow: 0 0 5px #ff0080, 0 0 12px #ff0080; color: #ff0080; }
+  16%  { text-shadow: 0 0 5px #ff8000, 0 0 12px #ff8000; color: #ff8000; }
+  33%  { text-shadow: 0 0 5px #ffff00, 0 0 12px #ffff00; color: #ffff00; }
+  50%  { text-shadow: 0 0 5px #00ff80, 0 0 12px #00ff80; color: #00ff80; }
+  66%  { text-shadow: 0 0 5px #0080ff, 0 0 12px #0080ff; color: #0080ff; }
+  83%  { text-shadow: 0 0 5px #8000ff, 0 0 12px #8000ff; color: #8000ff; }
+  100% { text-shadow: 0 0 5px #ff0080, 0 0 12px #ff0080; color: #ff0080; }
 }
 
 /* ---- Shared CSS variables for dark and party modes ---- */
@@ -150,10 +152,25 @@ html[data-theme="party"] a.bibtex-link {
   animation: bibtex-link-glow-pulse 2.5s ease-in-out infinite;
 }
 
+/* `transform` is compositor-driven, so this costs nothing per frame — but it
+   only gets its own layer once we ask for one. */
 html[data-theme="party"] .author__avatar img {
   animation: avatar-rotate 60s linear infinite;
+  will-change: transform;
 }
 
 #theme-icon.fa-star {
   animation: disco-glow 1.5s linear infinite;
+}
+
+/* Respect users who have asked the OS for less motion: party mode keeps its
+   colours and glows, but nothing pulses or spins. */
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="party"] a,
+  html[data-theme="party"] a.repo-link,
+  html[data-theme="party"] a.bibtex-link,
+  html[data-theme="party"] .author__avatar img,
+  #theme-icon.fa-star {
+    animation: none;
+  }
 }
