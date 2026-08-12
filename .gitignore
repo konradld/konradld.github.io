@@ -18,3 +18,8 @@ package-lock.json
 
 # Ignore folders related to IDEs
 .vscode/
+
+# Ignore Claude Code worktrees. These are separate checkouts, so committing one
+# records a bare gitlink with no .gitmodules entry, which makes actions/checkout
+# fail: "No url found for submodule path ... in .gitmodules".
+.claude/worktrees/
