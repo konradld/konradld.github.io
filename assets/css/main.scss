@@ -52,17 +52,46 @@
   border-bottom: none;
 }
 
-/* Thinner fonts */
+/* Thinner fonts
+ *
+ * Mobile first: phones render the system sans (SF Ultralight / Roboto Thin) as
+ * hairlines at weight 100, so small screens keep readable weights. The thin
+ * treatment is re-applied from $medium (768px) up, where it reads as intended.
+ */
 body {
-  font-weight: 100;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 600;
 }
 
 p, li, td, th, span, a {
-  font-weight: 100;
+  font-weight: 400;
+}
+
+.archive__item-authors,
+.archive__item-title em {
+  font-weight: 400;
+}
+
+@include breakpoint($medium) {
+  body {
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+  }
+
+  p, li, td, th, span, a {
+    font-weight: 100;
+  }
+
+  .archive__item-authors,
+  .archive__item-title em {
+    font-weight: 300;
+  }
 }
