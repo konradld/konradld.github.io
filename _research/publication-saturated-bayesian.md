@@ -1,16 +1,16 @@
 ---
-title: "Bayesian Indicator-Saturated Regression for Climate Policy Evaluation"
+title: "Bayesian Indicator-Saturated Regression"
 collection: research
-category: workingpaper
+category: manuscripts
 permalink: /publication/2024-saturated-bayesian
 excerpt: 'We introduce a maximally flexible Bayesian method for detecting structural breaks in panel data with applications in climate policy.'
 authors: "Konrad, L.D., [Vashold, L.](https://www.vashold.eu/), Crespo Cuaresma, J."
-date: 2026-03-05
-venue: 'Conditional Accept at The Econometrics Journal'
+date: 2026-026-08
+venue: 'Forthcoming in the Econometrics Journal'
 paperurl: 'https://arxiv.org/abs/2603.04997'
 repo_url: 'https://github.com/konradld/EctJ_climate_policy_breaks'
 bibtexurl: '/bib/saturated-bayesian.txt'
-citation: 'Konrad, L.D., Vashold, L., Crespo Cuaresma, J. (2026). &quot;Bayesian Indicator-Saturated Regression for Climate Policy Evaluation&quot; <i>arXiv</i>.'
+citation: 'Konrad, L.D., Vashold, L., Crespo Cuaresma, J. (2026). &quot;Bayesian Indicator-Saturated Regression&quot; <i>arXiv</i>.'
 ---
 **Abstract:** Structural break identification methods are an important tool for evaluating the effectiveness of climate change mitigation policies. In this paper, we introduce a unified probabilistic framework for detecting structural breaks with unknown timing and arbitrary sequence in longitudinal data. The proposed Bayesian setup uses indicator-saturated regression and a spike-and-slab prior with an inverse-moment density as the slab component to ensure model selection consistency. Simulation results show that the method outperforms comparable frequentist approaches, particularly in environments with a high probability of structural breaks. We apply the framework to identify and evaluate the effects of climate policies in the European road transport sector. 
 
@@ -20,8 +20,11 @@ citation: 'Konrad, L.D., Vashold, L., Crespo Cuaresma, J. (2026). &quot;Bayesian
 - European Seminar on Bayesian Econometrics (ESOBE) 2024
 - University of Melbourne - Econometrics Seminar 2025
 - Monash University - EBS seminar 2025
+- International Conference on Economic Modeling and Data Science (EcoMod 2026)
+- Asia Meeting of the Econometric Society, East & Southeast Asia (AMES 2026)
+- European Meeting of the Econometric Society (EEA-ESEM 2026)
 
-**Status:** Conditional Accept at The Econometrics Journal
+**Status:**  Forthcoming in the Econometrics Journal
 
 **Co-authors:** [Lukas Vashold](https://www.vashold.eu/), [Jesús Crespo Cuaresma](https://www.wu.ac.at/en/economics/people/crespo-j)
 
