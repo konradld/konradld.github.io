@@ -21,8 +21,10 @@ a static version of the same deck for printing and offline reading.
 | 1 | **Introduction** — what statistics is, and what this course covers | [Slides](/files/bridging-econometrics/01_intro.html) | [PDF](/files/bridging-econometrics/01_intro.pdf) |
 | 2 | **Random Variables** — distributions, moments, transformations, and limit theorems | [Slides](/files/bridging-econometrics/02_random_variables.html) | [PDF](/files/bridging-econometrics/02_random_variables.pdf) |
 | 3 | **Multivariate Random Variables** — joint laws, independence, dependence, and the multivariate normal | [Slides](/files/bridging-econometrics/03_multivariate_rv.html) | [PDF](/files/bridging-econometrics/03_multivariate_rv.pdf) |
-| 4 | **Estimation Theory** — properties of estimators, sufficiency, UMVUE, and GMM | [Slides](/files/bridging-econometrics/04_estimation.html) | [PDF](/files/bridging-econometrics/04_estimation.pdf) |
+| 4 | **Estimation** — from a point estimate to an interval: bias, variance, the Cramér-Rao bound, coverage, the bootstrap, and GMM | [Slides](/files/bridging-econometrics/0406_estimation_and_intervals.html) | [PDF](/files/bridging-econometrics/0406_estimation_and_intervals.pdf) |
 | 5 | **Hypothesis Testing** — errors, power, likelihood ratios, and multiple comparisons | [Slides](/files/bridging-econometrics/05_testing.html) | [PDF](/files/bridging-econometrics/05_testing.pdf) |
+| 6 | **Bayesian Inference** — priors, posteriors, conjugate updating, shrinkage, and evidence | [Slides](/files/bridging-econometrics/07_bayesian.html) | [PDF](/files/bridging-econometrics/07_bayesian.pdf) |
+| 7 | **Statistical Challenges** — what breaks when the assumptions do | [Slides](/files/bridging-econometrics/08_challenges.html) | [PDF](/files/bridging-econometrics/08_challenges.pdf) |
 
 Use the arrow keys (or swipe) to move through a deck; press `?` for the full
 list of keyboard shortcuts.
