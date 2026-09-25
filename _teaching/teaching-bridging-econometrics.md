@@ -23,8 +23,9 @@ a static version of the same deck for printing and offline reading.
 | 3 | **Multivariate Random Variables** — joint laws, independence, dependence, and the multivariate normal | [Slides](/files/bridging-econometrics/03_multivariate_rv.html) | [PDF](/files/bridging-econometrics/03_multivariate_rv.pdf) |
 | 4 | **Estimation** — from a point estimate to an interval: bias and variance, losses, maximum likelihood, GMM, efficiency, confidence intervals, and p-values | [Slides](/files/bridging-econometrics/0406_estimation_and_intervals.html) | [PDF](/files/bridging-econometrics/0406_estimation_and_intervals.pdf) |
 | 5 | **Hypothesis Testing** — errors, power, likelihood ratios, and multiple comparisons | [Slides](/files/bridging-econometrics/05_testing.html) | [PDF](/files/bridging-econometrics/05_testing.pdf) |
-| 6 | **Bayesian Inference** — priors, posteriors, conjugate updating, shrinkage, and evidence | [Slides](/files/bridging-econometrics/07_bayesian.html) | [PDF](/files/bridging-econometrics/07_bayesian.pdf) |
+| 6 | **Bayesian Inference** — priors, posteriors, conjugate and non-conjugate updating, shrinkage (ridge to horseshoe), evidence, and spike-and-slab model selection | [Slides](/files/bridging-econometrics/07_bayesian.html) | [PDF](/files/bridging-econometrics/07_bayesian.pdf) |
 | 7 | **Statistical Challenges** — what breaks when the assumptions do | [Slides](/files/bridging-econometrics/08_challenges.html) | [PDF](/files/bridging-econometrics/08_challenges.pdf) |
+| 8 | **Econometric Models** — the linear model, binary choice, and a tour of count, censored, panel, IV, and quantile models, with R output | [Slides](/files/bridging-econometrics/09_econometric_models.html) | [PDF](/files/bridging-econometrics/09_econometric_models.pdf) |
 
 Use the arrow keys (or swipe) to move through a deck; press `?` for the full
 list of keyboard shortcuts.
