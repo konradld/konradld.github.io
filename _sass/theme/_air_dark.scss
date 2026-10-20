@@ -64,14 +64,17 @@ $bibtex-link-color: #e6b800;
   100% { transform: rotate(360deg) scale(1); }
 }
 
-/* Party-mode neon groups. Every group has its own pastel colour, collapse
-   pattern and period (all slow, and no two alike), so the page never pulses
-   in unison. Links sit in a big, whitish glow most of the time and now and
-   then the glow collapses before flaring back. The collapse patterns:
-   "dip" (smooth dip and recovery), "double" (two quick dips), "fade" (slow
-   fade-out, snap back), "blink" (sharp cut-out), "flicker" (stuttering neon
-   tube). Each keyframe lists two shadows, now up to 44px, so this is the
-   heaviest part of the page to paint; see the performance note above. */
+/* Party-mode neon groups. Every group has its own pastel colour and its own
+   period (all slow, and no two alike) but they all share one smooth pulse, so
+   the glows swell and ebb out of step with each other like waves. The glow
+   uses currentColor, which lets a single keyframe serve every colour. Two
+   shadows, up to 44px, so this is the heaviest part of the page to paint;
+   see the performance note above. */
+
+@keyframes neon-pulse {
+  0%, 100% { text-shadow: 0 0 4px currentColor, 0 0 14px currentColor; }
+  50%      { text-shadow: 0 0 12px currentColor, 0 0 44px currentColor; }
+}
 
 $neon-top      : #a6f7ff;  /* masthead links     */
 $neon-side     : #ffb3ef;  /* sidebar links      */
@@ -81,53 +84,6 @@ $neon-paper    : #d4b8ff;  /* download / supplement links */
 $neon-repo     : mix(#fff, $repo-link-color, 55%);
 $neon-bibtex   : mix(#fff, $bibtex-link-color, 55%);
 $neon-default  : mix(#fff, $primary-color, 55%);
-
-@function neon-on($c)  { @return 0 0 12px $c, 0 0 44px rgba($c, 0.9); }
-@function neon-off($c) { @return 0 0 1px rgba($c, 0.3), 0 0 3px rgba($c, 0.1); }
-
-@keyframes neon-dip-top {
-  0%, 38%, 66%, 100% { text-shadow: neon-on($neon-top); }
-  52%                { text-shadow: neon-off($neon-top); }
-}
-
-@keyframes neon-double-side {
-  0%, 52%, 68%, 84%, 100% { text-shadow: neon-on($neon-side); }
-  58%, 76%                { text-shadow: neon-off($neon-side); }
-}
-
-@keyframes neon-fade-title {
-  0%, 62%, 100% { text-shadow: neon-on($neon-title); }
-  90%           { text-shadow: neon-off($neon-title); }
-  98%           { text-shadow: neon-off($neon-title); }
-}
-
-@keyframes neon-dip-authors {
-  0%, 30%, 70%, 100% { text-shadow: neon-on($neon-authors); }
-  50%                { text-shadow: neon-off($neon-authors); }
-}
-
-@keyframes neon-blink-paper {
-  0%, 74%, 82%, 100% { text-shadow: neon-on($neon-paper); }
-  77%, 79%           { text-shadow: neon-off($neon-paper); }
-}
-
-@keyframes neon-flicker-repo {
-  0%, 36%, 62%, 100% { text-shadow: neon-on($neon-repo); }
-  40%, 48%           { text-shadow: neon-off($neon-repo); }
-  44%                { text-shadow: neon-on($neon-repo); }
-  52%                { text-shadow: neon-off($neon-repo); }
-  56%                { text-shadow: neon-on($neon-repo); }
-}
-
-@keyframes neon-dip-bibtex {
-  0%, 25%, 75%, 100% { text-shadow: neon-on($neon-bibtex); }
-  50%                { text-shadow: neon-off($neon-bibtex); }
-}
-
-@keyframes neon-dip-default {
-  0%, 30%, 70%, 100% { text-shadow: neon-on($neon-default); }
-  50%                { text-shadow: neon-off($neon-default); }
-}
 
 @keyframes disco-glow {
   0%   { text-shadow: 0 0 5px #ff0080, 0 0 12px #ff0080; color: #ff0080; }
@@ -169,44 +125,44 @@ html[data-theme="party"] {
 /* Fallback for any link not claimed by a group below. */
 html[data-theme="party"] a {
   color: $neon-default;
-  animation: neon-dip-default 7.3s ease-in-out infinite;
+  animation: neon-pulse 7.3s ease-in-out infinite;
 }
 
 html[data-theme="party"] .masthead a {
   color: $neon-top;
-  animation: neon-dip-top 4.6s ease-in-out infinite;
+  animation: neon-pulse 4.6s ease-in-out infinite;
 }
 
 html[data-theme="party"] .sidebar a,
 html[data-theme="party"] .author__urls a {
   color: $neon-side;
-  animation: neon-double-side 5.9s ease-in-out infinite;
+  animation: neon-pulse 5.9s ease-in-out infinite;
 }
 
 html[data-theme="party"] .archive__item-title > a {
   color: $neon-title;
-  animation: neon-fade-title 6.7s ease-in-out infinite;
+  animation: neon-pulse 6.7s ease-in-out infinite;
 }
 
 html[data-theme="party"] .archive__item-authors,
 html[data-theme="party"] .archive__item-authors a {
   color: $neon-authors;
-  animation: neon-dip-authors 8.3s ease-in-out infinite;
+  animation: neon-pulse 8.3s ease-in-out infinite;
 }
 
 html[data-theme="party"] .archive__item-citation a:not(.repo-link):not(.bibtex-link) {
   color: $neon-paper;
-  animation: neon-blink-paper 5.3s ease-in-out infinite;
+  animation: neon-pulse 5.3s ease-in-out infinite;
 }
 
 html[data-theme="party"] a.repo-link {
   color: $neon-repo;
-  animation: neon-flicker-repo 9.1s linear infinite;
+  animation: neon-pulse 9.1s ease-in-out infinite;
 }
 
 html[data-theme="party"] a.bibtex-link {
   color: $neon-bibtex;
-  animation: neon-dip-bibtex 7.7s ease-in-out infinite;
+  animation: neon-pulse 7.7s ease-in-out infinite;
 }
 
 /* `transform` is compositor-driven, so this costs nothing per frame — but it
