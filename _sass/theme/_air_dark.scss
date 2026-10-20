@@ -53,8 +53,8 @@ $bibtex-link-color: #e6b800;
 
    The pulses below are deliberately extreme: they swing from an almost
    unlit link to a hard neon blast, with radii up to 32px. Each keyframe still
-   lists only two shadows, and the funk beyond the glow (colour cycling, the
-   avatar spin/breathe) is colour- or transform-driven, so it stays cheap. If
+   lists only two shadows, and the avatar spin/breathe is
+   transform-driven, so it stays cheap. If
    scrolling gets janky on a slow machine, lower the radii first. */
 
 @keyframes avatar-rotate {
@@ -65,53 +65,66 @@ $bibtex-link-color: #e6b800;
   100% { transform: rotate(360deg) scale(1); }
 }
 
-/* Neon colour cycle for ordinary links; their glow uses currentColor so it
-   follows the cycle. */
-@keyframes link-neon-cycle {
-  0%, 100% { color: #00f0ff; }
-  20%      { color: #ff2bd6; }
-  40%      { color: #b6ff00; }
-  60%      { color: #ffe600; }
-  80%      { color: #9d4dff; }
+/* Party-mode neon groups. Every group has its own colour, pulse shape and
+   period (all slow, and no two alike), so the page never pulses in unison.
+   The shapes: "breathe" (smooth in/out), "heartbeat" (double thump), "sweep"
+   (quick flare, long fade), "blink" (sharp on/off), "flicker" (stuttering
+   neon tube). Each keyframe lists two shadows with radii <= 32px; see the
+   performance note above. */
+
+$neon-top      : #00f0ff;  /* masthead links     */
+$neon-side     : #ff2bd6;  /* sidebar links      */
+$neon-title    : #b6ff00;  /* paper titles       */
+$neon-authors  : #ff8a1f;  /* author lists       */
+$neon-paper    : #9d4dff;  /* download / supplement links */
+$neon-default  : $primary-color;
+
+@function neon-on($c)  { @return 0 0 10px $c, 0 0 32px rgba($c, 1); }
+@function neon-off($c) { @return 0 0 1px rgba($c, 0.25), 0 0 3px rgba($c, 0.1); }
+
+@keyframes neon-breathe-top {
+  0%, 100% { text-shadow: neon-off($neon-top); }
+  50%      { text-shadow: neon-on($neon-top); }
 }
 
-@keyframes link-glow-pulse {
-  0%, 100% {
-    text-shadow:
-      0 0 1px currentColor,
-      0 0 3px transparent;
-  }
-  45%, 55% {
-    text-shadow:
-      0 0 10px currentColor,
-      0 0 32px currentColor;
-  }
+@keyframes neon-heartbeat-side {
+  0%, 40%, 100% { text-shadow: neon-off($neon-side); }
+  10%, 30%      { text-shadow: neon-on($neon-side); }
+  20%           { text-shadow: neon-off($neon-side); }
 }
 
-@keyframes repo-link-glow-pulse {
-  0%, 100% {
-    text-shadow:
-      0 0 1px rgba($repo-link-color, 0.2),
-      0 0 3px rgba($repo-link-color, 0.1);
-  }
-  45%, 55% {
-    text-shadow:
-      0 0 10px #{$repo-link-color},
-      0 0 32px rgba($repo-link-color, 1);
-  }
+@keyframes neon-sweep-title {
+  0%   { text-shadow: neon-off($neon-title); }
+  12%  { text-shadow: neon-on($neon-title); }
+  100% { text-shadow: neon-off($neon-title); }
 }
 
-@keyframes bibtex-link-glow-pulse {
-  0%, 100% {
-    text-shadow:
-      0 0 1px rgba($bibtex-link-color, 0.2),
-      0 0 3px rgba($bibtex-link-color, 0.1);
-  }
-  45%, 55% {
-    text-shadow:
-      0 0 10px #{$bibtex-link-color},
-      0 0 32px rgba($bibtex-link-color, 1);
-  }
+@keyframes neon-breathe-authors {
+  0%, 100% { text-shadow: neon-off($neon-authors); }
+  50%      { text-shadow: neon-on($neon-authors); }
+}
+
+@keyframes neon-blink-paper {
+  0%, 38%, 62%, 100% { text-shadow: neon-off($neon-paper); }
+  44%, 56%           { text-shadow: neon-on($neon-paper); }
+}
+
+@keyframes neon-flicker-repo {
+  0%, 100% { text-shadow: neon-off($repo-link-color); }
+  8%, 14%  { text-shadow: neon-on($repo-link-color); }
+  11%      { text-shadow: neon-off($repo-link-color); }
+  60%, 80% { text-shadow: neon-on($repo-link-color); }
+  70%      { text-shadow: neon-off($repo-link-color); }
+}
+
+@keyframes neon-breathe-bibtex {
+  0%, 100% { text-shadow: neon-off($bibtex-link-color); }
+  50%      { text-shadow: neon-on($bibtex-link-color); }
+}
+
+@keyframes neon-breathe-default {
+  0%, 100% { text-shadow: neon-off($neon-default); }
+  50%      { text-shadow: neon-on($neon-default); }
 }
 
 @keyframes disco-glow {
@@ -151,19 +164,46 @@ html[data-theme="party"] {
 
 /* ---- Party mode: all the flashy stuff ---- */
 
+/* Fallback for any link not claimed by a group below. */
 html[data-theme="party"] a {
-  animation: link-glow-pulse 2s ease-in-out infinite,
-             link-neon-cycle 5s linear infinite;
+  animation: neon-breathe-default 7.3s ease-in-out infinite;
+}
+
+html[data-theme="party"] .masthead a {
+  color: $neon-top;
+  animation: neon-breathe-top 4.6s ease-in-out infinite;
+}
+
+html[data-theme="party"] .sidebar a,
+html[data-theme="party"] .author__urls a {
+  color: $neon-side;
+  animation: neon-heartbeat-side 5.9s ease-in-out infinite;
+}
+
+html[data-theme="party"] .archive__item-title > a {
+  color: $neon-title;
+  animation: neon-sweep-title 6.7s ease-out infinite;
+}
+
+html[data-theme="party"] .archive__item-authors,
+html[data-theme="party"] .archive__item-authors a {
+  color: $neon-authors;
+  animation: neon-breathe-authors 8.3s ease-in-out infinite;
+}
+
+html[data-theme="party"] .archive__item-citation a:not(.repo-link):not(.bibtex-link) {
+  color: $neon-paper;
+  animation: neon-blink-paper 5.3s ease-in-out infinite;
 }
 
 html[data-theme="party"] a.repo-link {
   color: var(--repo-link-color);
-  animation: repo-link-glow-pulse 3s ease-in-out infinite;
+  animation: neon-flicker-repo 9.1s linear infinite;
 }
 
 html[data-theme="party"] a.bibtex-link {
   color: var(--bibtex-link-color);
-  animation: bibtex-link-glow-pulse 2.5s ease-in-out infinite;
+  animation: neon-breathe-bibtex 7.7s ease-in-out infinite;
 }
 
 /* `transform` is compositor-driven, so this costs nothing per frame — but it
@@ -181,10 +221,9 @@ html[data-theme="party"] .author__avatar img {
    colours and glows, but nothing pulses or spins. */
 @media (prefers-reduced-motion: reduce) {
   html[data-theme="party"] a,
-  html[data-theme="party"] a.repo-link,
-  html[data-theme="party"] a.bibtex-link,
+  html[data-theme="party"] .archive__item-authors,
   html[data-theme="party"] .author__avatar img,
   #theme-icon.fa-star {
-    animation: none;
+    animation: none !important;
   }
 }
