@@ -117,7 +117,7 @@
 
       {% if post.supplementurl %}
         {% if pipe %} | {% endif %}
-        <a href="{{ post.supplementurl }}"><i class="fa fa-file-alt" aria-hidden="true"></i> Online Supplement</a>
+        <a href="{{ post.supplementurl }}" class="supplement-link"><i class="fa fa-file-alt" aria-hidden="true"></i> Online Supplement</a>
         {% assign pipe = true %}
       {% endif %}
 

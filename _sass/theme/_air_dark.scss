@@ -73,13 +73,14 @@ $bibtex-link-color: #e6b800;
   50%      { text-shadow: 0 0 12px currentColor, 0 0 44px currentColor; }
 }
 
-$neon-top      : #a6f7ff;  /* masthead links     */
-$neon-side     : #ffb3ef;  /* sidebar links      */
-$neon-title    : #e0ff99;  /* paper titles       */
-$neon-authors  : #ffd4a8;  /* author lists       */
-$neon-paper    : #d4b8ff;  /* download / supplement links */
-$neon-repo     : mix(#fff, $repo-link-color, 55%);
-$neon-bibtex   : mix(#fff, $bibtex-link-color, 55%);
+$neon-top      : #fff6b8;  /* masthead links: pastel yellow        */
+$neon-side     : #fff6b8;  /* sidebar links: pastel yellow         */
+$neon-title    : mix(#fff, $primary-color, 40%);  /* paper titles: teal */
+$neon-authors  : #f6fbff;  /* author lists: white                  */
+$neon-paper    : #b9f5cb;  /* download / supplement: pastel green  */
+$neon-supp     : #d9c7ff;  /* online supplement: pastel lavender   */
+$neon-repo     : #b8dcff;  /* GitHub links: pastel blue            */
+$neon-bibtex   : mix(#fff, $bibtex-link-color, 35%);  /* BibTeX: gold */
 $neon-default  : mix(#fff, $primary-color, 55%);
 
 @keyframes disco-glow {
@@ -147,9 +148,14 @@ html[data-theme="party"] .archive__item-authors a {
   animation: neon-pulse 8.3s ease-in-out infinite;
 }
 
-html[data-theme="party"] .archive__item-citation a:not(.repo-link):not(.bibtex-link) {
+html[data-theme="party"] .archive__item-citation a:not(.repo-link):not(.bibtex-link):not(.supplement-link) {
   color: $neon-paper;
   animation: neon-pulse 5.3s ease-in-out infinite;
+}
+
+html[data-theme="party"] a.supplement-link {
+  color: $neon-supp;
+  animation: neon-pulse 6.3s ease-in-out infinite;
 }
 
 html[data-theme="party"] a.repo-link {
