@@ -5,7 +5,7 @@ category: manuscripts
 order: 1
 permalink: /publication/2026-finding-most-influential-sets
 excerpt: 'This paper presents an efficient algorithm to detect maximally influencial in linear regression and proposes consistency criteria for this to hold in double/debiased ML.'
-authors: "Konrad, L.D., [Kuschnig, N.](https://www.kuschnig.eu/)"
+authors: "Konrad,&nbsp;L.D., [Kuschnig,&nbsp;N.](https://www.kuschnig.eu/)"
 date: 2026-07-05
 venue: 'Proceedings of the International Conference on Machine Learning (ICML)'
 paperurl: 'https://openreview.net/forum?id=ghd0zmtpB9'

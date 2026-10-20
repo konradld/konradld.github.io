@@ -5,7 +5,7 @@ category: workingpaper
 order: 2
 permalink: /publication/2024-basically-trapped
 excerpt: 'This paper investigates the effects of subsidies in basic research by means of a general equilibrium model.'
-authors: "Konrad, L.D."
+authors: "Konrad,&nbsp;L.D."
 date: 2024-09-02
 venue: 'arXiv (pre-print)'
 paperurl: 'https://arxiv.org/abs/2511.17251'

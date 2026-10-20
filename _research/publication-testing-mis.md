@@ -5,7 +5,7 @@ category: manuscripts
 order: 1
 permalink: /publication/2025-testing-most-influential-sets
 excerpt: 'This paper establishes the distribution of maximally influencial sets in linear models, allowing to test for excessive influence.'
-authors: "Konrad, L.D., [Kuschnig, N.](https://www.kuschnig.eu/)"
+authors: "Konrad,&nbsp;L.D., [Kuschnig,&nbsp;N.](https://www.kuschnig.eu/)"
 date: 2026-04-24
 venue: 'Proceedings of the International Conference on Learning Representations (ICLR).'
 paperurl: 'http://arxiv.org/abs/2510.20372'

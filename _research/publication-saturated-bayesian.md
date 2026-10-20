@@ -4,7 +4,7 @@ collection: research
 category: manuscripts
 permalink: /publication/2024-saturated-bayesian
 excerpt: 'We introduce a maximally flexible Bayesian method for detecting structural breaks in panel data with applications in climate policy.'
-authors: "Konrad, L.D., [Vashold, L.](https://www.vashold.eu/), Crespo Cuaresma, J."
+authors: "Konrad,&nbsp;L.D., [Vashold,&nbsp;L.](https://www.vashold.eu/), Crespo&nbsp;Cuaresma,&nbsp;J."
 date: 2026-026-08
 venue: 'Forthcoming in the Econometrics Journal'
 paperurl: 'https://arxiv.org/abs/2603.04997'

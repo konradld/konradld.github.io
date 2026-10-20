@@ -3,7 +3,7 @@ title: "Generalized Normal Moment Prior"
 collection: research
 category: workinprogress
 permalink: /publication/2025-generalized-moment-prior
-authors: "Konrad, L.D."
+authors: "Konrad,&nbsp;L.D."
 excerpt: 'This paper develops a novel Bayesian prior distribution that approximates exact moment conditions while maintaining computational tractability.'
 
 #citation: 'Konrad, L.D. (2025). &quot;The Approximately Exact Generalized Moment Prior.&quot; <i>Unpublished Document</i>.'

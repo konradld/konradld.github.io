@@ -1,0 +1,8 @@
+@unpublished{konrad2026directional,
+  title        = {Inference for Directional Population Sensitivity: Fragility Curves and Breakdown in Linear Projections},
+  author       = {Konrad, Lucas D. and Kuschnig, Nikolas},
+  year         = {2026},
+  month        = oct,
+  note         = {Working paper},
+  url          = {https://lucaskonrad.eu/files/directional_population_sensitivity.pdf}
+}
