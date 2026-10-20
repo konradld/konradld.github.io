@@ -86,7 +86,7 @@
     {% endif %}
 
     {% assign has_links = false %}
-    {% if post.paperurl or post.slidesurl or post.bibtexurl or post.repo_url %}
+    {% if post.paperurl or post.slidesurl or post.supplementurl or post.bibtexurl or post.repo_url %}
       {% assign has_links = true %}
     {% endif %}
 
@@ -112,6 +112,12 @@
       {% if post.slidesurl %}
         {% if pipe %} | {% endif %}
         <a href="{{ post.slidesurl }}">Download Slides</a>
+        {% assign pipe = true %}
+      {% endif %}
+
+      {% if post.supplementurl %}
+        {% if pipe %} | {% endif %}
+        <a href="{{ post.supplementurl }}"><i class="fa fa-file-alt" aria-hidden="true"></i> Online Supplement</a>
         {% assign pipe = true %}
       {% endif %}
 
