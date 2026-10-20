@@ -51,17 +51,14 @@ $bibtex-link-color: #e6b800;
         on a page those rects overlap into a full-viewport repaint per frame.
      2. The number of shadows in the list — each one is a separate blur pass.
 
-   The glows below are deliberately huge and mostly on, with radii up to 44px.
-   Each keyframe lists only two shadows, and the avatar spin/breathe is
+   The glows below are deliberately huge at their peak, with radii up to 44px.
+   Each keyframe lists only two shadows, and the avatar spin is
    transform-driven, so it stays cheap. If scrolling gets janky on a slow
    machine, lower the radii first. */
 
 @keyframes avatar-rotate {
-  0%   { transform: rotate(0deg)   scale(1); }
-  25%  { transform: rotate(90deg)  scale(1.08); }
-  50%  { transform: rotate(180deg) scale(0.94); }
-  75%  { transform: rotate(270deg) scale(1.08); }
-  100% { transform: rotate(360deg) scale(1); }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* Party-mode neon groups. Every group has its own pastel colour and its own
@@ -72,7 +69,7 @@ $bibtex-link-color: #e6b800;
    see the performance note above. */
 
 @keyframes neon-pulse {
-  0%, 100% { text-shadow: 0 0 4px currentColor, 0 0 14px currentColor; }
+  0%, 100% { text-shadow: 0 0 1px currentColor, 0 0 3px currentColor; }
   50%      { text-shadow: 0 0 12px currentColor, 0 0 44px currentColor; }
 }
 
@@ -168,7 +165,7 @@ html[data-theme="party"] a.bibtex-link {
 /* `transform` is compositor-driven, so this costs nothing per frame — but it
    only gets its own layer once we ask for one. */
 html[data-theme="party"] .author__avatar img {
-  animation: avatar-rotate 24s ease-in-out infinite;
+  animation: avatar-rotate 60s linear infinite;
   will-change: transform;
 }
 
