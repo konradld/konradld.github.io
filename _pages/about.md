@@ -14,4 +14,6 @@ I am a PhD Candidate at the [WU – Vienna University of Economics and Business]
 
 My research interests are *econometric robustness* and *anomaly detection* in economic data as well as *economic risk* and modelling *dependency structures*.
 
+My job market paper is [*Inference for Directional Population Sensitivity*](/publication/2026-directional-population-sensitivity), joint with [Nikolas Kuschnig](https://www.kuschnig.eu/).
+
 You can find a PDF version of my <a href="files/Curriculum_Vitae.pdf"><i class="fa fa-file-pdf" aria-hidden="true"></i> CV here</a>. Feel free to contact me via <a href="mailto:lucas.konrad@wu.ac.at"><i class="fa fa-envelope" aria-hidden="true"></i> lucas.konrad@wu.ac.at</a>.
