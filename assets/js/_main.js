@@ -22,13 +22,17 @@ let determineComputedTheme = () => {
 // detect OS/browser preference
 const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
+// Party mode is currently disabled. Set to true to re-enable it (CSS is kept in _air_dark.scss).
+const PARTY_ENABLED = false;
+
 // Set the theme on page load or when explicitly called
 let setTheme = (theme) => {
-  const use_theme =
+  let use_theme =
     theme ||
     localStorage.getItem("theme") ||
     $("html").attr("data-theme") ||
     browserPref;
+  if (use_theme === "party" && !PARTY_ENABLED) use_theme = "dark";
 
   if (use_theme === "party") {
     $("html").attr("data-theme", "party");
@@ -45,7 +49,7 @@ let setTheme = (theme) => {
 // Toggle the theme manually: light → dark → party → light
 var toggleTheme = () => {
   const current_theme = $("html").attr("data-theme");
-  const new_theme = current_theme === "dark" ? "party" : current_theme === "party" ? "light" : "dark";
+  const new_theme = current_theme === "dark" ? (PARTY_ENABLED ? "party" : "light") : current_theme === "party" ? "light" : "dark";
   localStorage.setItem("theme", new_theme);
   setTheme(new_theme);
 };
