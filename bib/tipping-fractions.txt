@@ -1,0 +1,8 @@
+@unpublished{konrad2026tipping,
+  title        = {Tipping Fractions for Regression Conclusions},
+  author       = {Konrad, Lucas D. and Kuschnig, Nikolas},
+  year         = {2026},
+  month        = nov,
+  note         = {Working paper},
+  url          = {https://lucaskonrad.eu/files/jmp.pdf}
+}

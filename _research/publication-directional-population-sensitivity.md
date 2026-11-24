@@ -1,7 +1,9 @@
 ---
 title: "Inference for Directional Population Sensitivity: Fragility Curves and Breakdown in Linear Projections"
 collection: research
-category: jobmarket
+category: archived
+hidden: true
+sitemap: false
 permalink: /publication/2026-directional-population-sensitivity
 excerpt: 'We develop √N inference for a directional fragility curve that traces the worst-case change in a target contrast as an increasing share of the population is removed, and for the associated breakdown fraction.'
 authors: "Konrad,&nbsp;L.D., [Kuschnig,&nbsp;N.](https://www.kuschnig.eu/)"
